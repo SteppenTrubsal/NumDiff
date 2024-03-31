@@ -7,7 +7,7 @@ struct complex {
 	double y;
 };
 
-vector<double> getDer(vector<complex> vars) {
+vector<double> getDer(vector<complex>& vars) {
 	vector<double> res;
 	for (int i = 0; i < vars.size(); i++) {
 		double der;
@@ -28,7 +28,7 @@ vector<double> getDer(vector<complex> vars) {
 	}
 	return res;
 }
-vector<double> getSecDer(vector<complex> vars) {
+vector<double> getSecDer(vector<complex>& vars) {
 	vector<double> res;
 	for (int i = 0; i < vars.size()-1; i++) {
 		double der;
