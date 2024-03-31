@@ -32,7 +32,7 @@ vector<double> getSecDer(vector<complex> vars) {
 	vector<double> res;
 	for (int i = 0; i < vars.size()-1; i++) {
 		double der;
-		if ((vars.size() - i > 1) && (vars.size() - i > vars.size() - 1)) {	//central
+		if ((vars.size() - i > 1) && (vars.size() - i <= vars.size() - 1)) {	//central
 			der = (vars[i - 1].y - 2 * vars[i].y + vars[i + 1].y) / ((vars[i + 1].x - vars[i].x) * (vars[i + 1].x - vars[i].x));
 		}
 		else if (vars.size() - i > 2) {										//right
